@@ -1,10 +1,12 @@
-import react , { Component} from 'react';
+import React , { Component} from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '.HomeScreen'
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import HomeStackNavigator from './StackNavigation'
 import Search from './SearchScreen'
 import User from './UserScreen'
-import Business from './BusinessScreen'
+
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +30,7 @@ class TabNavigator extends Component{
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}>
-        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Home" component={HomeStackNavigator} />
         <Tab.Screen name="Search" component={Search} />
         <Tab.Screen name="User" component={User} />
       </Tab.Navigator>
