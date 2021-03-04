@@ -1,14 +1,16 @@
-import React from 'react';
+import React , { Component } from 'react';
 import { Text, View } from 'react-native';
 
 
 
-function User() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>User!</Text>
-    </View>
-  );
+class User extends Component {
+  render(){
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>User!</Text>
+      </View>
+    );
+  }
 }
 
 export default User;

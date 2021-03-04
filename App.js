@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from './components/HomeScreen'
 import Search from './components/SearchScreen'
 import User from './components/UserScreen'
+import Business from './components/BusinessScreen'
 
 const Tab = createBottomTabNavigator();
 

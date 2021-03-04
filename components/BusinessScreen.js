@@ -1,16 +1,16 @@
-import React , { Component } from 'react';
+import React , {Component }from 'react';
 import { Text, View } from 'react-native';
 
 
 
-class Search extends Component {
+class Business extends Component {
   render(){
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Search!</Text>
+        <Text>Business!</Text>
       </View>
     );
   }
 }
 
-export default Search;
+export default Business;
