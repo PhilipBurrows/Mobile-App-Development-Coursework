@@ -1,0 +1,39 @@
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  flexContainer:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  header:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    alignSelf:'stretch',
+    backgroundColor:'pink',
+    paddingLeft:20,
+  },
+  body:{
+    flex:6,
+    alignItems:'center',
+    justifyContent:'center',
+    alignSelf:'stretch',
+    backgroundColor:'lightblue'
+  },
+  homeScreenTitleText:{
+    color:'white',
+    fontSize:30,
+    fontWeight:'bold',
+    marginTop:50,
+    fontFamily:'serif',
+    fontStyle:'italic'
+  },
+  businessTitleText:{
+    color:'white',
+    fontSize:20,
+    fontWeight:'bold',
+    marginTop:50,
+    fontStyle:'italic'
+  }
+});

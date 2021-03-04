@@ -1,4 +1,5 @@
 import React , { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './HomeScreen';
@@ -12,9 +13,9 @@ class HomeStackNavigator extends Component{
   render(){
     return(
       <Stack.Navigator>
-        <Stack.Screen name='Home' component={Home}/>
-        <Stack.Screen name='Business' component={Business}/>
-        <Stack.Screen name='Review' component={Review}/>
+        <Stack.Screen name='Home' component={Home} options={{headerShown:false}}/>
+        <Stack.Screen name='Business' component={Business} options={{headerShown:false}}/>
+        <Stack.Screen name='Review' component={Review} options={{headerShown:false}}/>
       </Stack.Navigator>
     );
   }
@@ -24,9 +25,9 @@ class SearchStackNavigator extends Component{
   render(){
     return(
       <Stack.Navigator>
-        <Stack.Screen name='Search' component={Search}/>
-        <Stack.Screen name='Business' component={Business}/>
-        <Stack.Screen name='Review' component={Review}/>
+        <Stack.Screen name='Search' component={Search} options={{headerShown:false}}/>
+        <Stack.Screen name='Business' component={Business} options={{headerShown:false}}/>
+        <Stack.Screen name='Review' component={Review} options={{headerShown:false}}/>
       </Stack.Navigator>
     )
   }

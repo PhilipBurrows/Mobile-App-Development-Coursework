@@ -1,13 +1,20 @@
 import React , { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 
-
+import BaseStyle from './BaseStyle.style';
 
 class User extends Component {
   render(){
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>User!</Text>
+      <View style={BaseStyle.flexContainer}>
+        <View style={BaseStyle.header}>
+        </View>
+        <View style={BaseStyle.body}>
+          <Text>User!</Text>
+          <Button
+            title='Login'
+          />
+        </View>
       </View>
     );
   }
