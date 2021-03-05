@@ -13,6 +13,8 @@ export default StyleSheet.create({
     alignSelf:'stretch',
     backgroundColor:'pink',
     paddingLeft:20,
+    borderColor:'white',
+    borderBottomWidth:1
   },
   businessHeader:{
     flex:1,
@@ -61,5 +63,39 @@ export default StyleSheet.create({
     color:'white',
     fontSize:20,
     fontWeight:'bold'
+  },
+  searchHeader:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    alignSelf:'stretch',
+    backgroundColor:'pink',
+  },
+  searchTextInput:{
+    flex:1,
+    marginTop:50,
+    marginLeft:10,
+    marginRight:10,
+    borderColor:'gray',
+    borderWidth:1,
+    backgroundColor:'white'
+  },
+  loginInputContainer:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    alignSelf:'stretch',
+    marginBottom:400,
+    paddingTop:100
+  },
+  loginInput:{
+    flex:1,
+    marginBottom:10,
+    borderColor:'gray',
+    borderWidth:1,
+    backgroundColor:'white',
+    alignSelf:'stretch',
+    marginLeft:70,
+    marginRight:70,
   }
 });
