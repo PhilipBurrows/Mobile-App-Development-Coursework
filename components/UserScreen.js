@@ -1,25 +1,31 @@
 import React , { Component } from 'react';
-import { Text, View, Button, TextInput } from 'react-native';
+import { Text, View, Button, TextInput, KeyboardAvoidingView } from 'react-native';
 
 import BaseStyle from './BaseStyle.style';
 
 class User extends Component {
   render(){
     return (
-      <View style={BaseStyle.flexContainer}>
-        <View style={BaseStyle.header}>
-          <Text style={BaseStyle.userTitleText}>Username</Text>
-        </View>
-        <View style={BaseStyle.body}>
-          <View style={BaseStyle.loginInputContainer}>
-            <TextInput style={BaseStyle.loginInput}/>
-            <TextInput style={BaseStyle.loginInput}/>
-            <Button
-              title='Login'
-            />
+      <KeyboardAvoidingView style={BaseStyle.keyboardAvoidingContainer}
+        behavior={Platform.OS == "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
+        enabled={Platform.OS === "ios" ? true : false}>
+
+        <View style={BaseStyle.flexContainer}>
+          <View style={BaseStyle.header}>
+            <Text style={BaseStyle.userTitleText}>Username</Text>
+          </View>
+          <View style={BaseStyle.body}>
+            <View style={BaseStyle.loginInputContainer}>
+              <TextInput placeholder='email ' style={BaseStyle.loginInput}/>
+              <TextInput placeholder='password' style={BaseStyle.loginInput}/>
+              <Button
+                title='Login'
+              />
+            </View>
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }

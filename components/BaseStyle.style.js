@@ -6,6 +6,10 @@ export default StyleSheet.create({
     alignItems:'center',
     justifyContent:'center'
   },
+  keyboardAvoidingContainer:{
+    flex:1,
+    alignSelf:'stretch'
+  },
   header:{
     flex:1,
     flexDirection:'row',
@@ -40,12 +44,22 @@ export default StyleSheet.create({
     fontStyle:'italic'
   },
   businessTitleText:{
-    flex:4,
+    flex:8,
     color:'white',
     fontSize:20,
     fontWeight:'bold',
     marginTop:50,
-    fontStyle:'italic'
+    fontStyle:'italic',
+    marginLeft:20
+  },
+  businessHeaderButton:{
+    flex:3,
+    marginTop:50,
+    marginRight:10
+  },
+  businessScrollView:{
+    alignSelf:'stretch',
+    marginTop:10
   },
   userTitleText:{
     color:'white',
@@ -54,7 +68,7 @@ export default StyleSheet.create({
     marginTop:50,
   },
   backButton:{
-    flex:1,
+    flex:2,
     marginTop:50,
     marginLeft:10,
     marginRight:50
@@ -91,11 +105,23 @@ export default StyleSheet.create({
   loginInput:{
     flex:1,
     marginBottom:10,
-    borderColor:'gray',
+    borderColor:'grey',
     borderWidth:1,
     backgroundColor:'white',
     alignSelf:'stretch',
     marginLeft:70,
     marginRight:70,
+    paddingLeft:10
+  },
+  reviewInput:{
+    flex:1,
+    alignSelf:'stretch',
+    margin:20,
+    paddingLeft:10,
+    paddingRight:10,
+    borderColor:'lightgrey',
+    borderWidth:2,
+    backgroundColor:'white',
+    textAlignVertical:'top'
   }
 });
