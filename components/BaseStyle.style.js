@@ -14,6 +14,14 @@ export default StyleSheet.create({
     backgroundColor:'pink',
     paddingLeft:20,
   },
+  businessHeader:{
+    flex:1,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center',
+    alignSelf:'stretch',
+    backgroundColor:'pink',
+  },
   body:{
     flex:6,
     alignItems:'center',
@@ -30,10 +38,28 @@ export default StyleSheet.create({
     fontStyle:'italic'
   },
   businessTitleText:{
+    flex:4,
     color:'white',
     fontSize:20,
     fontWeight:'bold',
     marginTop:50,
     fontStyle:'italic'
+  },
+  userTitleText:{
+    color:'white',
+    fontSize:25,
+    fontWeight:'bold',
+    marginTop:50,
+  },
+  backButton:{
+    flex:1,
+    marginTop:50,
+    marginLeft:10,
+    marginRight:50
+  },
+  backButtonText:{
+    color:'white',
+    fontSize:20,
+    fontWeight:'bold'
   }
 });

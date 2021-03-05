@@ -8,6 +8,7 @@ class User extends Component {
     return (
       <View style={BaseStyle.flexContainer}>
         <View style={BaseStyle.header}>
+          <Text style={BaseStyle.userTitleText}>Username</Text>
         </View>
         <View style={BaseStyle.body}>
           <Text>User!</Text>

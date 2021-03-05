@@ -1,5 +1,6 @@
 import React , {Component }from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button , TouchableOpacity } from 'react-native';
+import Icons from 'react-native-vector-icons/MaterialIcons';
 
 import BaseStyle from './BaseStyle.style';
 
@@ -8,8 +9,16 @@ class Business extends Component {
     const navigation = this.props.navigation;
     return (
       <View style={BaseStyle.flexContainer}>
-        <View style={BaseStyle.header}>
+        <View style={BaseStyle.businessHeader}>
+          <TouchableOpacity style={BaseStyle.backButton}
+            onPress={() => navigation.goBack()}>
+
+            <Icons name={'arrow-back'} size={30} color='white'/>
+          </TouchableOpacity>
           <Text style={BaseStyle.businessTitleText}>Business Name</Text>
+        </View>
+        <View>
+
         </View>
         <View style={BaseStyle.body}>
           <Text>Business!</Text>
