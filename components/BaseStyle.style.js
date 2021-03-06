@@ -62,6 +62,19 @@ export default StyleSheet.create({
     marginTop:10
   },
   userTitleText:{
+    flex:2,
+    color:'white',
+    fontSize:25,
+    fontWeight:'bold',
+    marginTop:50,
+  },
+  newUserButton:{
+    flex:1,
+    marginTop:50,
+    marginRight:10
+  },
+  newUserTitleText:{
+    flex:12,
     color:'white',
     fontSize:25,
     fontWeight:'bold',
@@ -93,6 +106,14 @@ export default StyleSheet.create({
     borderColor:'gray',
     borderWidth:1,
     backgroundColor:'white'
+  },
+  newUserInputContainer:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    alignSelf:'stretch',
+    marginBottom:300,
+    paddingTop:100
   },
   loginInputContainer:{
     flex:1,

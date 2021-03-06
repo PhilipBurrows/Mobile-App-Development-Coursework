@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { HomeStackNavigator, SearchStackNavigator } from './StackNavigation';
+import { HomeStackNavigator, SearchStackNavigator, UserStackNavigator } from './StackNavigation';
 import Search from './SearchScreen';
 import User from './UserScreen';
 
@@ -32,7 +32,7 @@ class TabNavigator extends Component{
         })}>
         <Tab.Screen name="Home" component={HomeStackNavigator} />
         <Tab.Screen name="Search" component={SearchStackNavigator} />
-        <Tab.Screen name="User" component={User} />
+        <Tab.Screen name="User" component={UserStackNavigator} />
       </Tab.Navigator>
     );
   }
