@@ -1,9 +1,29 @@
 import React, {Component} from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Text, View, Button, StyleSheet, AsyncStorage } from 'react-native';
 
 import BaseStyle from './BaseStyle.style';
 
 class Home extends Component{
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      token:'blank',
+    }
+  }
+
+  _getData = async () => {
+    try {
+      const temp = await AsyncStorage.getItem('token');
+      this.setState({token:temp});
+      console.log(this.state.token);
+    }
+    catch(error){
+      console.log(error);
+    }
+  }
+
   render(){
     const navigation = this.props.navigation;
     return (

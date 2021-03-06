@@ -120,7 +120,7 @@ export default StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     alignSelf:'stretch',
-    marginBottom:400,
+    marginBottom:350,
     paddingTop:100
   },
   loginInput:{
@@ -133,6 +133,12 @@ export default StyleSheet.create({
     marginLeft:70,
     marginRight:70,
     paddingLeft:10
+  },
+  loginButton:{
+    flex:2
+  },
+  logoutButton:{
+    flex:2
   },
   reviewInput:{
     flex:1,
