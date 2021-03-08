@@ -15,7 +15,7 @@ export default StyleSheet.create({
     flexDirection:'row',
     alignItems:'center',
     alignSelf:'stretch',
-    backgroundColor:'pink',
+    backgroundColor:'#5D5C61',
     paddingLeft:20,
     borderColor:'white',
     borderBottomWidth:1
@@ -26,14 +26,14 @@ export default StyleSheet.create({
     alignItems:'center',
     justifyContent:'center',
     alignSelf:'stretch',
-    backgroundColor:'pink',
+    backgroundColor:'#5D5C61',
   },
   body:{
     flex:6,
     alignItems:'center',
     justifyContent:'center',
     alignSelf:'stretch',
-    backgroundColor:'lightblue'
+    backgroundColor:'#7395AE'
   },
   homeScreenTitleText:{
     color:'white',
@@ -99,7 +99,7 @@ export default StyleSheet.create({
     flexDirection:'row',
     alignItems:'center',
     alignSelf:'stretch',
-    backgroundColor:'pink',
+    backgroundColor:'#5D5C61',
   },
   searchTextInput:{
     flex:3,
@@ -192,18 +192,18 @@ export default StyleSheet.create({
   },
   businessCardNameContainer:{
     flex:1,
-    backgroundColor:'lightgrey',
+    backgroundColor:'#BC986A',
   },
   businessCardTtileContainer:{
     paddingTop:10,
     marginLeft:10,
     fontWeight:'bold',
     fontSize:20,
-    color:'blue'
+    color:'white'
   },
   businessCardRatingsContainer:{
     flex:2,
-    backgroundColor:'lightgrey',
+    backgroundColor:'#B1A296',
   },
   avgOverallRating:{
     fontWeight:'bold',
@@ -228,20 +228,20 @@ export default StyleSheet.create({
   },
   overallRatingAndLikesContainer:{
     flex:1,
-    backgroundColor:'lightgrey',
+    backgroundColor:'#BC986A',
     flexDirection:'row'
   },
   ratingBreakdownContainer:{
     flex:3,
-    backgroundColor:'grey',
+    backgroundColor:'#B1A296',
   },
   reviewTextContainer:{
     flex:4,
-    backgroundColor:'lightgreen',
+    backgroundColor:'#B1A296',
   },
   imageContainer:{
     flex:4,
-    backgroundColor:'orange'
+    backgroundColor:'#557A95'
   },
   overallRating:{
     flex:1,

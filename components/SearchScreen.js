@@ -46,6 +46,7 @@ class Search extends Component {
   }
 
   componentDidMount (){
+      this._getData()
       DeviceEventEmitter.addListener('loginSuccess', (e)=>{this._getData()})
   }
 
