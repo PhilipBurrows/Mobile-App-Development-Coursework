@@ -171,12 +171,55 @@ export default StyleSheet.create({
     backgroundColor:'white',
     textAlignVertical:'top'
   },
-  cardContainer:{
+  reviewCardContainer:{
     alignSelf:'stretch',
     backgroundColor:'pink',
     borderWidth:2,
     margin:10,
     height:300
+  },
+  businessCardContainer:{
+    alignSelf:'stretch',
+    backgroundColor:'pink',
+    borderWidth:2,
+    margin:10,
+    height:400
+  },
+  businessCardNameContainer:{
+    flex:1,
+    backgroundColor:'lightgrey',
+  },
+  businessCardTtileContainer:{
+    paddingTop:10,
+    marginLeft:10,
+    fontWeight:'bold',
+    fontSize:20,
+    color:'blue'
+  },
+  businessCardRatingsContainer:{
+    flex:2,
+    backgroundColor:'lightgrey',
+  },
+  avgOverallRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    paddingTop:10,
+    marginLeft:10
+  },
+  avgPriceRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    marginLeft:10
+  },
+  avgQualityRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    marginLeft:10
+  },
+  avgCleanlinessRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    marginLeft:10
   },
   overallRatingAndLikesContainer:{
     flex:1,

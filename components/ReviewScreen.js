@@ -26,8 +26,6 @@ class Review extends Component {
       this.setState({token:await AsyncStorage.getItem('@token')});
 
       this.sendReview();
-
-
     }
     catch(error){
       console.log(error);

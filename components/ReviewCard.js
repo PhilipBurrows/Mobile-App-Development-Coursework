@@ -10,7 +10,7 @@ class Card extends Component{
 
   render(){
     return(
-      <View style={BaseStyle.cardContainer}>
+      <View style={BaseStyle.reviewCardContainer}>
         <View style={BaseStyle.overallRatingAndLikesContainer}>
           <Text style={BaseStyle.overallRating}>Rating: {this.props.overallRating}</Text>
           <TouchableOpacity onPress={() => this.setState({likeIcon:'thumb-up-alt'})} style={BaseStyle.likeButton}>

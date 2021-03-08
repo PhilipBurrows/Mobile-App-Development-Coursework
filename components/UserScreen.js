@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import { Text, View, Button, TextInput, KeyboardAvoidingView, AsyncStorage, Alert } from 'react-native';
+import { Text, View, Button, TextInput, DeviceEventEmitter, KeyboardAvoidingView, AsyncStorage, Alert } from 'react-native';
 
 import BaseStyle from './BaseStyle.style';
 
@@ -42,9 +42,10 @@ class User extends Component {
       Alert.alert('Login Successful');
       this.setState({
         returnData:responseJson,
-        toggleButtons:false
+        toggleButtons:false,
       })
       this._storeData();
+      DeviceEventEmitter.emit('loginSuccess',{})
     })
     .catch((error) => {
       console.log(error);

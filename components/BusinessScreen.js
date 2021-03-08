@@ -40,13 +40,6 @@ class Business extends Component {
     });
   }
 
-  pushReviews(){
-
-  }
-
-
-
-
   render(){
     if(this.state.isLoading){
       return(
@@ -80,13 +73,13 @@ class Business extends Component {
                 onPress={() => this.getReviews()}
               />
             </View>
-            <ScrollView style={BaseStyle.businessScrollView} >
-              {this.state.returnData.location_reviews.map(review =>(
-                <View key={review.review_id}>
-                  <ReviewCard overallRating={review.overall_rating} priceRating={review.price_rating} qualityRating={review.quality_rating} cleanlinessRating={review.clenliness_rating} reviewBody={review.review_body}/>
-                </View>
-              ))}
-            </ScrollView>
+              <ScrollView style={BaseStyle.businessScrollView} >
+                {this.state.returnData.location_reviews.map(review =>(
+                  <View key={review.review_id}>
+                    <ReviewCard overallRating={review.overall_rating} priceRating={review.price_rating} qualityRating={review.quality_rating} cleanlinessRating={review.clenliness_rating} reviewBody={review.review_body}/>
+                  </View>
+                ))}
+              </ScrollView>
           </View>
         </View>
 
