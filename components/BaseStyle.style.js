@@ -57,6 +57,9 @@ export default StyleSheet.create({
     marginTop:50,
     marginRight:10
   },
+  businessUpdateButton:{
+    paddingTop:10
+  },
   businessScrollView:{
     alignSelf:'stretch',
     marginTop:10
@@ -167,5 +170,56 @@ export default StyleSheet.create({
     borderWidth:2,
     backgroundColor:'white',
     textAlignVertical:'top'
+  },
+  cardContainer:{
+    alignSelf:'stretch',
+    backgroundColor:'pink',
+    borderWidth:2,
+    margin:10,
+    height:300
+  },
+  overallRatingAndLikesContainer:{
+    flex:1,
+    backgroundColor:'lightgrey',
+    flexDirection:'row'
+  },
+  ratingBreakdownContainer:{
+    flex:3,
+    backgroundColor:'grey',
+  },
+  reviewTextContainer:{
+    flex:4,
+    backgroundColor:'lightgreen',
+  },
+  imageContainer:{
+    flex:4,
+    backgroundColor:'orange'
+  },
+  overallRating:{
+    flex:1,
+    marginLeft:10
+  },
+  likeButton:{
+    flex:1
+  },
+  priceRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    marginLeft:10
+  },
+  qualityRating:{
+    fontWeight:'bold',
+    paddingBottom:5,
+    marginLeft:10
+  },
+  cleanlinessRating:{
+    fontWeight:'bold',
+    marginLeft:10
+  },
+  reviewText:{
+    marginLeft:10
+  },
+  image:{
+    marginLeft:10
   }
 });

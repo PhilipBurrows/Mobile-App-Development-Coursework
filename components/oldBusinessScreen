@@ -11,10 +11,16 @@ class Business extends Component {
     super(props);
 
     this.state = {
-      businessID:this.props.route.params.businessID,
       isLoading:true,
       token:'',
       returnData:[],
+      reviews:[
+        { id : 1, overallRating:'5',priceRating:'4',qualityRating:'3',cleanlinessRating:'2', reviewBody: "review 1"},
+        { id : 2, overallRating:'5',priceRating:'4',qualityRating:'3',cleanlinessRating:'2', reviewBody: "review 2"},
+        { id : 3, overallRating:'5',priceRating:'4',qualityRating:'3',cleanlinessRating:'2', reviewBody: "review 3"},
+        { id : 4, overallRating:'5',priceRating:'4',qualityRating:'3',cleanlinessRating:'2', reviewBody: "review 4"}
+      ],
+      newId:5
     }
   }
 
@@ -23,7 +29,7 @@ class Business extends Component {
   }
 
   getReviews(){
-    return fetch('http://10.0.2.2:3333/api/1.0.0/location/'+this.state.businessID,{
+    return fetch('http://10.0.2.2:3333/api/1.0.0/location/1',{
       headers:{'Content-Type':'application/json'}
     })
     .then((response) => response.json())
@@ -31,8 +37,8 @@ class Business extends Component {
       this.setState({
         returnData: responseJson
       })
-      console.log('here')
-      console.log(this.props.route.params.businessID)
+      console.log(this.state.returnData.location_reviews[2].overall_rating)
+      this.state.reviews.push({id:this.state.newId,overallRating:5,priceRating:'4',qualityRating:'3',cleanlinessRating:'2', reviewBody: "test test test"},)
       this.setState({isLoading:false})
     })
     .catch((error) => {
@@ -69,21 +75,19 @@ class Business extends Component {
             <View style={BaseStyle.businessHeaderButton}>
               <Button
                 title='Review'
-                onPress={() => navigation.navigate('Review',{businessID:this.state.businessID})}
+                onPress={() => navigation.navigate('Review')}
               />
             </View>
           </View>
           <View style={BaseStyle.body}>
-            <View style={BaseStyle.businessUpdateButton}>
-              <Button
-                title={'Update'}
-                onPress={() => this.getReviews()}
-              />
-            </View>
+            <Button
+              title={this.state.returnData.location_name}
+              onPress={() => this.getReviews()}
+            />
             <ScrollView style={BaseStyle.businessScrollView} >
-              {this.state.returnData.location_reviews.map(review =>(
-                <View key={review.review_id}>
-                  <ReviewCard overallRating={review.overall_rating} priceRating={review.price_rating} qualityRating={review.quality_rating} cleanlinessRating={review.clenliness_rating} reviewBody={review.review_body}/>
+              {this.state.reviews.map(review =>(
+                <View key={review.id}>
+                  <ReviewCard overallRating={review.overallRating} priceRating={review.priceRating} qualityRating={review.qualityRating} cleanlinessRating={review.cleanlinessRating} reviewBody={review.reviewBody}/>
                 </View>
               ))}
             </ScrollView>

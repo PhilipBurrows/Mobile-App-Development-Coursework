@@ -55,7 +55,7 @@ class Home extends Component{
           <Text>Home!</Text>
           <Button
             title='Business'
-            onPress={() => navigation.navigate('Business')}
+            onPress={() => navigation.navigate('Business',{businessID:1})}
           />
         </View>
       </View>

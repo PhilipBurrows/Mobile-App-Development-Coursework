@@ -43,7 +43,7 @@ class Review extends Component {
       review_body: this.state.reviewBody
     }
 
-    return fetch('http://10.0.2.2:3333/api/1.0.0/location/1/review',{
+    return fetch('http://10.0.2.2:3333/api/1.0.0/location/' +this.props.route.params.businessID +'/review',{
       method:'post',
       headers:{'Content-Type':'application/json', 'X-Authorization':this.state.token},
       body: JSON.stringify(to_send)
