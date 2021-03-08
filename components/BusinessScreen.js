@@ -58,11 +58,11 @@ class Business extends Component {
 
               <Icons name={'arrow-back'} size={30} color='white'/>
             </TouchableOpacity>
-            <Text style={BaseStyle.businessTitleText}>Business Name</Text>
+            <Text style={BaseStyle.businessTitleText}>{this.state.returnData.location_name}</Text>
             <View style={BaseStyle.businessHeaderButton}>
               <Button
                 title='Review'
-                onPress={() => navigation.navigate('Review',{businessID:this.state.businessID})}
+                onPress={() => navigation.navigate('Review',{businessID:this.state.businessID, businessName:this.state.returnData.location_name})}
               />
             </View>
           </View>

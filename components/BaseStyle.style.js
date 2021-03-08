@@ -102,13 +102,18 @@ export default StyleSheet.create({
     backgroundColor:'pink',
   },
   searchTextInput:{
-    flex:1,
+    flex:3,
     marginTop:50,
     marginLeft:10,
     marginRight:10,
     borderColor:'gray',
     borderWidth:1,
     backgroundColor:'white'
+  },
+  searchButton:{
+    flex:1,
+    marginTop:50,
+    marginRight:10
   },
   newUserInputContainer:{
     flex:1,

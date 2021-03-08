@@ -60,12 +60,6 @@ class Home extends Component{
             <Text style={BaseStyle.homeScreenTitleText}>CoffeDa</Text>
           </View>
           <View style={BaseStyle.body}>
-
-            <Text>Home!</Text>
-            <Button
-              title='Business'
-              onPress={() => navigation.navigate('Business',{businessID:1})}
-            />
             <ScrollView style={BaseStyle.businessScrollView}>
               {this.state.returnData.map(business => (
                 <View key={business.location_id}>

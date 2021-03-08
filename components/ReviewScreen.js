@@ -68,7 +68,7 @@ class Review extends Component {
               onPress={() => navigation.goBack()}>
               <Icons name={'arrow-back'} size={30} color='white'/>
             </TouchableOpacity>
-            <Text style={BaseStyle.businessTitleText}>Business Name</Text>
+            <Text style={BaseStyle.businessTitleText}>{this.props.route.params.businessName}</Text>
             <View style={BaseStyle.businessHeaderButton}>
               <Button
                 title='Submit'
