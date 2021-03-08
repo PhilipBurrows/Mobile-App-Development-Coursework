@@ -140,8 +140,25 @@ export default StyleSheet.create({
   logoutButton:{
     flex:2
   },
-  reviewInput:{
+  ratingsContainer:{
     flex:1,
+    flexDirection:'row',
+    paddingLeft:30,
+    paddingRight:30
+  },
+  ratingInput:{
+    flex:1,
+    backgroundColor:'white',
+    marginLeft:5,
+    textAlign:'center',
+    borderColor:'lightgrey',
+    borderWidth:1,
+    backgroundColor:'white',
+    marginTop:10,
+    height:30,
+  },
+  reviewInput:{
+    flex:15,
     alignSelf:'stretch',
     margin:20,
     paddingLeft:10,

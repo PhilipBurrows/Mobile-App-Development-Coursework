@@ -9,20 +9,39 @@ class Home extends Component{
     super(props);
 
     this.state = {
-      token:'blank',
+      token:'',
+      returnData:[]
     }
   }
 
   _getData = async () => {
     try {
-      const temp = await AsyncStorage.getItem('token');
-      this.setState({token:temp});
-      console.log(this.state.token);
+      this.setState({token:await AsyncStorage.getItem('@token')});
+
+      this.getAllBusinesses();
     }
     catch(error){
       console.log(error);
     }
   }
+
+  getAllBusinesses(){
+
+    return fetch('http://10.0.2.2:3333/api/1.0.0/find',{
+      headers:{'Content-Type':'application/json', 'X-Authorization':this.state.token}
+    })
+    .then((response) => response.json())
+    .then((responseJson) => {
+      this.setState({
+        returnData: responseJson
+      })
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+
+
 
   render(){
     const navigation = this.props.navigation;
@@ -33,7 +52,7 @@ class Home extends Component{
         </View>
         <View style={BaseStyle.body}>
 
-          <Text>Home</Text>
+          <Text>Home!</Text>
           <Button
             title='Business'
             onPress={() => navigation.navigate('Business')}

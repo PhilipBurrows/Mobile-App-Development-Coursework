@@ -19,7 +19,7 @@ class User extends Component {
 
   _storeData = async () => {
     try {
-      await AsyncStorage.setItem('token', this.state.returnData.token)
+      await AsyncStorage.setItem('@token', this.state.returnData.token)
     }
     catch (error){
       console.log(error);
@@ -62,7 +62,7 @@ class User extends Component {
         returnData:[],
         toggleButtons:true
       })
-      this._storeData();
+
     })
     .catch((error) => {
       console.log(error);

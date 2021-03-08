@@ -1,0 +1,32 @@
+_getData = async () => {
+  try {
+    this.setState({token:await AsyncStorage.getItem('@token')});
+    if(!this.state.token == null)
+    {
+      this.logout();
+    }
+    else {
+      Alert.alert('You must be logged in to do this')
+    }
+  }
+  catch(error){
+    console.log(error);
+  }
+}
+
+logout(){
+  return fetch('http://10.0.2.2:3333/api/1.0.0/user/logout',{
+    method:'post',
+    headers:{'Content-Type':'application/json', 'X-Authorization':this.state.token},
+  })
+  .then((response) => {
+    Alert.alert('Logout Successful');
+    this.setState({
+      returnData:[],
+      toggleButtons:true
+    })
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+}
