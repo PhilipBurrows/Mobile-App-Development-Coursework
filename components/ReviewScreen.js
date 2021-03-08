@@ -33,25 +33,30 @@ class Review extends Component {
   }
 
   sendReview(){
-    let to_send={
-      overall_rating: parseInt(this.state.overallRating),
-      price_rating: parseInt(this.state.priceRating),
-      quality_rating: parseInt(this.state.qualityRating),
-      clenliness_rating: parseInt(this.state.cleanlinessRating),
-      review_body: this.state.reviewBody
+    if(this.state.reviewBody.toLowerCase().includes('tea') || this.state.reviewBody.toLowerCase().includes('cake') || this.state.reviewBody.toLowerCase().includes('pastries') || this.state.reviewBody.toLowerCase().includes('pastry')){
+      Alert.alert('Profanity Detected')
     }
+    else{
+      let to_send={
+        overall_rating: parseInt(this.state.overallRating),
+        price_rating: parseInt(this.state.priceRating),
+        quality_rating: parseInt(this.state.qualityRating),
+        clenliness_rating: parseInt(this.state.cleanlinessRating),
+        review_body: this.state.reviewBody
+      }
 
-    return fetch('http://10.0.2.2:3333/api/1.0.0/location/' +this.props.route.params.businessID +'/review',{
-      method:'post',
-      headers:{'Content-Type':'application/json', 'X-Authorization':this.state.token},
-      body: JSON.stringify(to_send)
-    })
-    .then((response) => {
-      Alert.alert('Review Sent');
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+      return fetch('http://10.0.2.2:3333/api/1.0.0/location/' +this.props.route.params.businessID +'/review',{
+        method:'post',
+        headers:{'Content-Type':'application/json', 'X-Authorization':this.state.token},
+        body: JSON.stringify(to_send)
+      })
+      .then((response) => {
+        Alert.alert('Review Sent');
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
   }
 
 
